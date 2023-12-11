@@ -14,8 +14,13 @@ public class Jatek {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Karakter k1 = new Karakter(3, 6 ,8);
+        Karakter k1 = new Karakter();
+        Targy kendo = new Targy("Kendő", "ruha");
+        Targy bajital = new Targy("Bájital", "varázslatos folyadék");
+        k1.Felvesz(kendo);
+        k1.Felvesz(bajital, 5);
         System.out.println(k1);
+        
     }
     
 }

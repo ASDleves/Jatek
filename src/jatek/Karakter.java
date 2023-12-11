@@ -1,21 +1,35 @@
 
 package jatek;
 
-public class Karakter {
-    private int eletero, ugyesseg, szerencse;
-    private Arraylist<String> felszereles;
-    public Karakter(int eletero, int ugyesseg, int szerencse) {
-        this.eletero = eletero;
-        this.ugyesseg = ugyesseg;
-        this.szerencse = szerencse;
-    }
+import java.util.ArrayList;
+import java.util.Random;
 
+public class Karakter {
+    private static final Random rnd = new Random();
+    private int eletero, ugyesseg, szerencse;
+    private ArrayList<Targy> felszerelesek;
+    
+    public Karakter() {
+        setEletero(12);   
+        setUgyesseg(6);  
+        setSzerencse(6); 
+        this.felszerelesek = new ArrayList<>();
+    }
+    
+    public void Felvesz(Targy felszereles) {
+        felszerelesek.add(felszereles);
+    }
+    public void Felvesz(Targy felszereles, int szam) {
+        for (int i = 0; i < szam; i++) {
+            felszerelesek.add(felszereles);
+        }
+    }
     public int getEletero() {
         return eletero;
     }
 
     public void setEletero(int eletero) {
-        this.eletero = eletero;
+        this.eletero = rnd.nextInt(eletero)+12;
     }
 
     public int getUgyesseg() {
@@ -23,7 +37,7 @@ public class Karakter {
     }
 
     public void setUgyesseg(int ugyesseg) {
-        this.ugyesseg = ugyesseg;
+        this.ugyesseg = rnd.nextInt(ugyesseg)+6;
     }
 
     public int getSzerencse() {
@@ -31,13 +45,15 @@ public class Karakter {
     }
 
     public void setSzerencse(int szerencse) {
-        this.szerencse = szerencse;
+        this.szerencse = rnd.nextInt(szerencse)+6;
     }
 
     @Override
     public String toString() {
-        return "Karakter{" + "eletero=" + eletero + ", ugyesseg=" + ugyesseg + ", szerencse=" + szerencse + '}';
+        return "Karakter{" + "eletero=" + eletero + ", ugyesseg=" + ugyesseg + ", szerencse=" + szerencse + ", felszerelesek=" + felszerelesek + '}';
     }
+
+
     
     
 }
