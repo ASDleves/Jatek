@@ -13,6 +13,15 @@ class Targy {
         UUID randomUUID = UUID.randomUUID();
         this.id = randomUUID;
     }
+
+    public String getNev() {
+        return nev;
+    }
+    
+    @Override
+    public String toString() {
+        return "Targy{" + "nev=" + nev + '}';
+    }
     
     
 }
