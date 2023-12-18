@@ -1,9 +1,11 @@
 
 package jatek;
 
+import java.util.ArrayList;
+
 public class Karakter {
     private int eletero, ugyesseg, szerencse;
-    private Arraylist<String> felszereles;
+    private ArrayList<String> felszereles;
     public Karakter(int eletero, int ugyesseg, int szerencse) {
         this.eletero = eletero;
         this.ugyesseg = ugyesseg;

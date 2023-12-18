@@ -1,10 +1,9 @@
-
 package jatek;
 
- 
 public class MainForm extends javax.swing.JFrame {
 
     private Helyszin helyszin;
+
     public MainForm() {
         initComponents();
         helyszin = new Start();
@@ -30,7 +29,8 @@ public class MainForm extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Játék");
 
-        jButton1.setText("egyik irany");
+        jButton1.setText("Egyik Irany");
+        jButton1.setActionCommand("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -75,41 +75,38 @@ public class MainForm extends javax.swing.JFrame {
                 .addGap(110, 110, 110))
         );
 
+        jButton1.getAccessibleContext().setAccessibleName("");
+
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        helyszin = helyszin.BalIrany();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+
+        jTextArea1.setCaretPosition(0);
+        jButton1.setText(helyszin.BalFelirat());
+
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+
+        } else
+            jButton1.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        helyszin = helyszin.EgyikIrany();
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        jTextArea1.insert(helyszin.leiras()+ "\n",0);
-        
+        helyszin = helyszin.JobbIrany();
+        jTextArea1.insert(helyszin.leiras() + "\n", 0);
+
         jTextArea1.setCaretPosition(0);
-        jButton2.setText(helyszin.EgyikFelirat());
+        jButton2.setText(helyszin.JobbFelirat());
+
+        if (helyszin instanceof MasikIrany) {
+            jButton1.setVisible(true);
+
+        } else
+            jButton1.setVisible(false);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
