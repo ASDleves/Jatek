@@ -19,19 +19,10 @@ public class Jobbra extends Helyszin {
     }
 
     @Override
-    public String BalFelirat() {
-        return "???";
-    }
-
-    @Override
     public String JobbFelirat() {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
-    @Override
-    public Helyszin BalIrany() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 
     @Override
     public Helyszin JobbIrany() {

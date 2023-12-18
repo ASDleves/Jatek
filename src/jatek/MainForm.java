@@ -30,6 +30,7 @@ public class MainForm extends javax.swing.JFrame {
         setTitle("Játék");
 
         jButton1.setText("Egyik Irany");
+        jButton1.setToolTipText("");
         jButton1.setActionCommand("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,12 +83,12 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        helyszin = helyszin.BalIrany();
+        helyszin = ((MasikIrany) helyszin).BalIrany();
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
 
         jTextArea1.setCaretPosition(0);
-        jButton1.setText(helyszin.BalFelirat());
-
+ jButton1.setText(((MasikIrany) helyszin).BalFelirat());
+        jButton2.setText(helyszin.JobbFelirat());
         if (helyszin instanceof MasikIrany) {
             jButton1.setVisible(true);
 
@@ -100,6 +101,7 @@ public class MainForm extends javax.swing.JFrame {
         jTextArea1.insert(helyszin.leiras() + "\n", 0);
 
         jTextArea1.setCaretPosition(0);
+        jButton1.setText(((MasikIrany) helyszin).BalFelirat());
         jButton2.setText(helyszin.JobbFelirat());
 
         if (helyszin instanceof MasikIrany) {

@@ -15,12 +15,12 @@ public class Del extends Helyszin implements MasikIrany{
 
     @Override
     public String leiras() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Ez Dél!";
     }
 
     @Override
     public String BalFelirat() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "D1";
     }
 
     @Override
@@ -30,7 +30,7 @@ public class Del extends Helyszin implements MasikIrany{
 
     @Override
     public String JobbFelirat() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "D2";
     }
 
     @Override

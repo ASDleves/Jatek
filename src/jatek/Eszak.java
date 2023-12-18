@@ -15,12 +15,12 @@ public class Eszak extends Helyszin implements MasikIrany{
 
     @Override
     public String leiras() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "Ez Észak!";
     }
 
     @Override
     public String BalFelirat() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "E1";
     }
 
     @Override
@@ -30,7 +30,7 @@ public class Eszak extends Helyszin implements MasikIrany{
 
     @Override
     public String JobbFelirat() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        return "E2";
     }
 
     @Override

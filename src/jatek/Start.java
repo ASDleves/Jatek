@@ -7,15 +7,7 @@ public class Start extends Helyszin {
         return "Ez a start. haladj tovabb";
     }
 
-    @Override
-    public Helyszin BalIrany() {
-        return new Kezdes();
-    }
 
-    @Override
-    public String BalFelirat() {
-        return "Tovább";
-    }
 
     @Override
     public String JobbFelirat() {
