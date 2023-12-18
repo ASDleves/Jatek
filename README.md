@@ -1,4 +1,2 @@
-# Jatek
--Bella Richárd
-szerializalas
-Tervezésminta
+Jtek
+Bella Richárd -Szerializálás
